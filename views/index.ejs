@@ -1,0 +1,18 @@
+<% include header.ejs %>
+
+<h1>Tigers (<%- tigers.length %>)</h1>
+
+<ol>
+   <% tigers.forEach(function(tiger, i) { %>
+       <li <% if(i % 2 != 0) { %> style="bg-primary;"<% } %> >
+       <%= tiger %>
+       </li>
+<% }); %>
+</ol>
+
+<a href="/add">Add a tiger</a></br>
+<a href="/update">Update a tiger</a></br>
+<a href="/delete">delete a tiger</a></br>
+
+
+<% include footer.ejs %>
